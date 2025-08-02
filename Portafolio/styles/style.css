@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root{
+    --color-primario: #2D336B;
+    --color-secundario: #A9B5DF;
+    --color-terciario: #7886C7;
+
+    --fuente-parrafo: "Montserrat", sans-serif;
+    --fuente-titulo: "Krona One", sans-serif;
+}
+
+*{
+    padding:  0;
+    margin: 0;
+}
+
+
+body {
+    background-color: var(--color-primario);
+    color: var(--color-secundario);
+    box-sizing: border-box;
+}
+
+
+.header{
+    padding: 2% 0% 0% 25%;
+}
+
+.header__menu{
+    display: flex;
+    gap: 80px;
+}
+
+.header__menu__link{
+    color: var(--color-terciario);
+    font-family: var(--fuente-parrafo);
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.header__menu__link:hover{
+    color: #97a9f8;
+}
+
+.presentacion{
+    display: flex;
+    align-items: center;
+    padding: 1.7% 15%;
+    justify-content: space-between;
+    gap: 5px;
+}
+
+.presentacion__contenido{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.presentacion__contenido__titulo{
+    font-size: 36px;
+    font-family: var(--fuente-titulo);
+}
+
+.titulo-header{
+    color: var(--color-terciario);
+}
+
+.presentacion__contenido__parrafo{
+    font-size: 1.5rem;
+    font-family: var(--fuente-parrafo);
+}
+
+.presentacion__contenido__enlaces{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+}
+
+.presentacion__contenido__enlaces__link{
+    width: 50%;
+    text-align: center;
+    padding: 21.5px 0;
+    border-radius: 5px;
+    font-family: var(--fuente-parrafo);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color:var(--color-secundario);
+    border: 2px solid var(--color-terciario);
+    display: flex;
+    justify-content: center;
+    gap: 0.625rem;
+}
+
+.presentacion__contenido__enlaces__link:hover{
+    background-color: #434c97;
+    /* animation: shadow-drop-center 0s linear both; */
+}
+
+/* @keyframes cambiar-color {
+    from{
+        background-color: #2D336B;
+    }
+    
+    to{
+        background-color: #434c97;
+    }
+} */
+
+
+.presentacion__contenido__imagen{
+    align-self: flex-start;
+    width: 50%;
+    padding: 0% 0% 28% 0% ;
+}
+
+.presentacion__contenido__enlaces__subtitulo{
+    font-family: var(--fuente-titulo);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.footer{
+    background-color: var(--color-terciario);
+    padding: 1.5rem;
+    color: black;
+    text-align: center;
+    font-family: var(--fuente-parrafo);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.shadow-drop-center {
+  animation: shadow-drop-center 0.4s linear both;
+}
+
+@keyframes shadow-drop-center {
+  0% {
+    box-shadow: 0 0 0 0 transparent;
+  }
+  100% {
+    box-shadow: 0 0 20px 0 rgba(255, 255, 255, 0.55);
+  }
+}
+
+@media (max-width : 1200px){
+    .presentacion {
+        flex-direction: column-reverse;
+        padding: 5%;
+        gap: 32px; /* te puede ayudar a no necesitar tanto margin-top en imagen */
+    }
+
+    .presentacion__contenido {
+        width: 100%;
+    }
+
+    .presentacion__contenido__imagen {
+        display: block;
+        margin: 0 auto;
+        width: 80%;
+        height: auto;
+    }
+
+    .presentacion__contenido__enlaces__link{
+        padding: 21.5px 40px;
+    }
+
+    .header {
+        padding: 10% 5%;
+    }
+
+    .header__menu {
+        justify-content: center;
+    }
+}
